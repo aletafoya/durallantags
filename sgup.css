@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: rgb(100, 174, 176);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bar:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    background-color: rgb(63, 66, 66);
+}
+
+.everything {
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+    height: 100vh;            
+    background-color: #f0f0f0; 
+}
+
+.sign-in-div {
+    width: 400px;
+    height: 500px;  
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.txtIn {
+    width: 80%;
+    padding: 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.end-operation {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #2a5298;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.txtIn:focus {
+    border-color: #2a5298;
+    outline: none;
+}
+
+.wrap {
+    text-decoration: none;
+    color: black;
+}
+
+.tirelogo {
+    width: 50px;
+    height: auto;
+}
+
+.changeSt {
+    color: rgb(40, 36, 163);
+}

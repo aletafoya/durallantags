@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0; 
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.account {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: rgb(100, 174, 176);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.wrap {
+    padding: 10px 20px;
+    text-decoration: none;
+    color:rgb(194, 204, 205);
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.tirelogo:hover{
+    cursor: pointer;
+}
+
+.tirelogo {
+    width: 50px;
+    height: auto;
+}
+
+.homePageText {
+    margin-top: 50px;
+    font-family: "Source Sans 3",sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
+.explore {
+    color:#565555;
+    margin-top: 70px;
+    margin-left: 180px;
+}
+
+.tab-grid {
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 50px;
+}
+
+.services, .products, .reserv, .contact, .requests, .about {
+    height: 200px;
+    display: flex;
+    font-family: "Source Sans 3",sans-serif;
+    color: white;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.services {
+    background: linear-gradient(180deg, rgba(143, 183, 160, 0.9) 50%, rgba(173, 207, 187, 0.9));
+}
+
+.products {
+    background: linear-gradient(180deg, rgba(136, 98, 205, 0.9) 85%, rgba(159, 122, 227, 0.9));
+}
+
+.reserv {
+    background: linear-gradient(180deg, rgba(98, 154, 207, 0.9) 85%, rgba(132, 182, 229, 0.9));
+}
+
+.contact {
+    background: linear-gradient(180deg, rgba(193, 170, 103, 0.9) 85%, rgba(221, 202, 144, 0.9));
+}
+
+.requests {
+    background: linear-gradient(180deg, rgba(197, 121, 103, 0.9) 85%, rgba(224, 151, 135, 0.9));
+}
+
+.about {
+    background: linear-gradient(180deg, rgba(102, 193, 168, 0.9) 85%, rgba(135, 218, 196, 0.9));
+}
