@@ -100,3 +100,19 @@ body {
 .about {
     background: linear-gradient(180deg, rgba(102, 193, 168, 0.9) 85%, rgba(135, 218, 196, 0.9));
 }
+
+.divs-for-anchors {
+    padding: 10px 20px;
+    text-decoration: none;
+    color:rgb(221, 232, 233);
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.divs-for-anchors:visited {
+    color:rgb(221, 232, 233);
+}
+
+.divs-for-anchors:hover {
+    color: rgb(126, 133, 133);
+}

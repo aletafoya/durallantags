@@ -19,12 +19,12 @@
     <div class="homePageText">DURALLANTAGS</div>
     <div class="explore">Explorar</div>
     <div class="tab-grid">
-        <div class="services"><a class="divs-for-anchors">Servicios</a></div>
-        <div class="products"><a class="divs-for-anchors">Productos</a></div>
-        <div class="reserv"><a class="divs-for-anchors">Citas</a></div>
-        <div class="contact"><a class="divs-for-anchors">Contacto</a></div>
-        <div class="requests"><a class="divs-for-anchors">Pedidos</a></div>
-        <div class="about"><a class="divs-for-anchors">Acerca de</a></div>
+        <div class="services"><a href="services_page.html" class="divs-for-anchors">Servicios</a></div>
+        <div class="products"><a href="products_page.html" class="divs-for-anchors">Productos</a></div>
+        <div class="reserv"><a href="appointments_page.html" class="divs-for-anchors">Citas</a></div>
+        <div class="contact"><a href="contact_page.html" class="divs-for-anchors">Contacto</a></div>
+        <div class="requests"><a href="orders_page.html" class="divs-for-anchors">Pedidos</a></div>
+        <div class="about"><a href="about_page.html" class="divs-for-anchors">Acerca de</a></div>
     </div>
     <script src="script.js"></script>
 </body>
