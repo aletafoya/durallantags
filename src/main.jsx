@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import Facts from "./components/Facts.jsx";
 import ProductGallery from "./components/ProductGallery.jsx";
+import BrandsCarousel from "./components/BrandsCarousel.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -12,5 +13,6 @@ createRoot(document.getElementById("root")).render(
     <Hero />
     <Facts />
     <ProductGallery />
+    <BrandsCarousel />
   </StrictMode>
 );
