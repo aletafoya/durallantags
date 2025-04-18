@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <img className="h-10 w-auto" src={logo} alt="DURA LLANTAS Logo" />
             <span className="ml-2 text-2xl font-teko font-bold text-gray-900">
-              DURA LLANTAS
+              DURA LLANTAGS
             </span>
           </div>
 

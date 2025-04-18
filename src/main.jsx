@@ -7,6 +7,7 @@ import Facts from "./components/Facts.jsx";
 import ProductGallery from "./components/ProductGallery.jsx";
 import BrandsCarousel from "./components/BrandsCarousel.jsx";
 import ContactForm from "./components/ContactForm.jsx";
+import Footer from "./components/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById("root")).render(
     <ProductGallery />
     <BrandsCarousel />
     <ContactForm />
+    <Footer />
   </StrictMode>
 );
