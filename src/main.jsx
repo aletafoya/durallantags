@@ -6,6 +6,7 @@ import Hero from "./components/Hero.jsx";
 import Facts from "./components/Facts.jsx";
 import ProductGallery from "./components/ProductGallery.jsx";
 import BrandsCarousel from "./components/BrandsCarousel.jsx";
+import ContactForm from "./components/ContactForm.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,5 +15,6 @@ createRoot(document.getElementById("root")).render(
     <Facts />
     <ProductGallery />
     <BrandsCarousel />
+    <ContactForm />
   </StrictMode>
 );

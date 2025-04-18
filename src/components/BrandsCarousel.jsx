@@ -1,25 +1,25 @@
 import React from "react";
 
 const brandLogos = [
-  { src: "public/brands/firestone_logo.png", alt: "Firestone" },
-  { src: "public/brands/bridgestone_logo.png", alt: "Bridgestone" },
-  { src: "public/brands/michelin_logo.png", alt: "Michelin" },
-  { src: "public/brands/goodyear_logo.png", alt: "Goodyear" },
-  { src: "public/brands/pirelli_logo.png", alt: "Pirelli" },
+  { src: "/brands/firestone_logo.png", alt: "Firestone" },
+  { src: "/brands/bridgestone_logo.png", alt: "Bridgestone" },
+  { src: "/brands/michelin_logo.png", alt: "Michelin" },
+  { src: "/brands/goodyear_logo.png", alt: "Goodyear" },
+  { src: "/brands/pirelli_logo.png", alt: "Pirelli" },
 ];
 
 const BrandsCarousel = () => {
   return (
     <div
-      className="w-full flex justify-around items-center"
-      style={{ height: "10vh" }}
+      className="w-full flex justify-around items-center bg-white"
+      style={{ height: "12vh" }}
     >
       {brandLogos.map((logo, index) => (
         <img
           key={index}
           src={logo.src}
           alt={logo.alt}
-          className="h-full object-contain"
+          className="h-4/5 object-contain"
         />
       ))}
     </div>
