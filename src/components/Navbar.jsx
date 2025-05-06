@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import React from "react";
 import logo from "../assets/logo.webp";
+import { BrowserRouter as Router, Route, Routes, Link, Navigate, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   return (
