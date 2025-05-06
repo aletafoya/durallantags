@@ -1,7 +1,8 @@
 // src/components/Navbar.jsx
 import React from "react";
 import logo from "../assets/logo.webp";
-import { BrowserRouter as Router, Route, Routes, Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   return (
@@ -19,24 +20,25 @@ const Navbar = () => {
           {/* Menú de navegación */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="font-montserrat text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium"
               >
                 Inicio
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/products"
                 className="font-montserrat text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium"
               >
                 Productos
-              </a>
-              <a
-                href="#"
+              </Link>
+              <HashLink
+                to="/#contacto"
+                smooth
                 className="font-montserrat text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium"
               >
                 Contacto
-              </a>
+              </HashLink>
             </div>
           </div>
 
