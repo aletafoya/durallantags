@@ -23,11 +23,6 @@ const Hero = () => {
             Todo lo que tus llantas necesitan, en un solo lugar.
           </h2>
 
-          <div className="flex justify-center lg:justify-start">
-            <button className="bg-[#FFC108] hover:bg-[#FFD700] text-[#000000] font-montserrat font-bold py-3 px-8 rounded-md text-lg transition duration-300">
-              Agenda Una Cita
-            </button>
-          </div>
         </div>
 
         {/* Image - centered without border */}
