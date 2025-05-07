@@ -18,13 +18,14 @@ function Products() {
 
     fetchData();
   }, []);
-
+  
   return (
     <div className="p-4">
       <h1 className="text-2xl font-semibold mb-4">Productos</h1>
       <div>
         {products.map(product => (
           <ProductCard
+            key={product["NO ART"]}
             name={product["Descripción"]}
             description={product["Precio"]}
           />
