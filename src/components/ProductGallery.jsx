@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import AllProd from "./allProd";
 
 import continental from '../assets/TiresImg/CONTINENTAL.jpg';
 import bridgestone from '../assets/TiresImg/BRIDGESTONE.jpg';
@@ -12,21 +13,21 @@ const ProductGallery = () => {
       name: "Llanta Continental",
       description: "Perfecta para situaciones extremas",
       source: continental,
-      lnk: "/products",
+      link: "/Products",
     },
     {
       id: 2,
       name: "Llanta Bridgestone",
       description: "Ideal para carreteras mojadas",
       source: bridgestone,
-      lnk: "/products",
+      link: "/Products",
     },
     {
       id: 3,
       name: "Llanta Michelin",
       description: "Gran rendimiento en ciudad",
       source: michelin,
-      lnk: "/products",
+      link: "/Products",
     },
   ];
 
@@ -46,17 +47,14 @@ const ProductGallery = () => {
               source={product.source}
               name={product.name}
               description={product.description}
-              lnk={product.lnk}
+              link={product.link}
             />
           ))}
         </div>
 
         {/* Botón "Ver Todos Los Productos" */}
-        <div className="text-center">
-          <button className="bg-[#FFC108] hover:bg-[#FFD700] text-black font-Montserrat font-bold py-3 px-8 rounded-md text-lg transition duration-300 transform hover:scale-105">
-            Ver Todos Los Productos
-          </button>
-        </div>
+        <AllProd />
+        
       </div>
     </section>
   );

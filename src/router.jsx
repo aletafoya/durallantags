@@ -5,6 +5,7 @@ import "./index.css";
 import Home from "./views/Home/";
 import Products from "./views/Products";
 import Layout from "./layouts/Layout";
+import Cart from "./views/Cart";
 
 function AppRouter() {
   return (
@@ -13,6 +14,7 @@ function AppRouter() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>

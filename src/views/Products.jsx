@@ -111,7 +111,7 @@ function Products() {
             source={product.imageSrc}
             name={product["Descripción"]}
             description={"$" + product["Precio"]}
-            lnk={"./views/Cart.jsx"}
+            link={"/cart"}
           />
         ))}
       </div>
