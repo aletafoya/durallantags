@@ -5,7 +5,6 @@ const Hero = () => {
   return (
     <section className="w-full min-h-screen bg-gradient-to-b from-[#024BAB] to-[#002D6E] flex items-center">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center">
-        {/* Text content - centered */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
           <h1 className="font-Teko text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
             Llantas Y Servicio De Calidad Para Tu Auto
@@ -25,7 +24,6 @@ const Hero = () => {
 
         </div>
 
-        {/* Image - centered without border */}
         <div className="lg:w-1/2 flex justify-center">
           <img
             src={storeImage}

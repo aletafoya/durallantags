@@ -1,25 +1,32 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
+import continental from '../assets/TiresImg/CONTINENTAL.jpg';
+import bridgestone from '../assets/TiresImg/BRIDGESTONE.jpg';
+import michelin from '../assets/TiresImg/MICHELIN.png';
+
 const ProductGallery = () => {
   const products = [
     {
       id: 1,
-      name: "Llanta X",
+      name: "Llanta Continental",
       description: "Perfecta para situaciones extremas",
-      source: "public/tire_example.png",
+      source: continental,
+      lnk: "/products",
     },
     {
       id: 2,
-      name: "Llanta Y",
+      name: "Llanta Bridgestone",
       description: "Ideal para carreteras mojadas",
-      source: "public/tire_example.png",
+      source: bridgestone,
+      lnk: "/products",
     },
     {
       id: 3,
-      name: "Llanta Z",
+      name: "Llanta Michelin",
       description: "Gran rendimiento en ciudad",
-      source: "public/tire_example.png",
+      source: michelin,
+      lnk: "/products",
     },
   ];
 
@@ -39,6 +46,7 @@ const ProductGallery = () => {
               source={product.source}
               name={product.name}
               description={product.description}
+              lnk={product.lnk}
             />
           ))}
         </div>
