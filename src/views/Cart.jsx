@@ -6,22 +6,13 @@ import Accept from "../components/Accept";
 function Cart() {
     const location = useLocation();
     const product = location.state;
-    const [total, setTotal] = useState(product ? product["Precio"] : 0);
     const limit = product ? product["Cant. Disp. "] : 0;
-    
+    const pr = product ? product["Precio"] : 0;
 
     if (!product) {
         return (
             <div className="p-4">
                 <h1 className="text-xl font-semibold">Sin productos</h1>
-            </div>
-        );
-    }
-    
-    if (total === 0) {
-        return (
-            <div className="p-4">
-                <h1 className="bg-[#FFC108] hover:bg-[#FFD700] text-black font-Montserrat font-bold py-3 px-8 rounded-md text-lg transition duration-300 transform hover:scale-105">Sin productos</h1>
             </div>
         );
     }
@@ -37,10 +28,9 @@ function Cart() {
                 />
                 <div>
                     <h2 className="text-3xl font-bold">{product["Descripción"]}</h2>
-                    <p className="text-xl text-gray-600 mt-2">${total.toFixed(2)}</p>
                 </div>
             </div>
-            <Accept price={total} limit={limit}></Accept>
+            <Accept price={pr} limit={limit} product={product}></Accept>
         </div>
     );
 }

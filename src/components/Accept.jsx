@@ -1,12 +1,12 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import trash from "../assets/TiresImg/trash.png";
 import add from "../assets/TiresImg/add.png";
 
-const Accept = ({price, limit}) => {
+const Accept = ({price, limit, product}) => {
     const [quantity, setQuantity] = React.useState(1);
     const [total, setTotal] = React.useState(price);
-    
+
     const handleAdd = () => {
         const newQuantity = quantity < limit ? quantity + 1 : limit;
         setQuantity(newQuantity);
@@ -40,6 +40,17 @@ const Accept = ({price, limit}) => {
             >
                 <img src={add} className="w-10 h-10" alt="Increase quantity" />
             </button>
+            <p className="text-xl text-gray-600 mt-2">${total.toFixed(2)}</p>
+            <Link to="/submission" state={{
+                    product: {
+                    imageSrc: product.imageSrc,
+                    name: product["Descripción"],
+                    description: total
+                    }
+                }}>
+                <button className="bg-[#CAE8E3] hover:bg-[#D5EDE9] text-black font-Montserrat font-bold
+                    py-3 px-8 rounded-md text-lg transition duration-300 transform hover:scale-105">Aceptar</button>
+            </Link>
         </div>
     );
 }
