@@ -1,13 +1,45 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { collection, getDocs, query, where, updateDoc, doc } from "firebase/firestore";
+import { db } from "../firebase";
 import emailjs from "@emailjs/browser";
+
+async function updateDB(id, quantity) {
+  try {
+    const productsRef = collection(db, "products_storage");
+    const q = query(productsRef, where("NO ART", "==", id));
+    const snap = await getDocs(q);
+
+    if (!snap.empty) {
+      const docSnap = snap.docs[0];
+      const data = docSnap.data();
+      
+      const fieldName = "stock";
+      const currentStock = data[fieldName] || 0;
+      const newStock = currentStock - quantity;
+
+      const productDocRef = doc(db, "products_storage", docSnap.id);
+      await updateDoc(productDocRef, {
+        [fieldName]: newStock >= 0 ? newStock : 0,
+      });
+
+      console.log("Stock actualizado correctamente.");
+    } else {
+      console.error("Producto no encontrado");
+    }
+  } catch (error) {
+    console.error("Error actualizando producto:", error);
+  }
+}
 
 const SubmissionPage = () => {
   const location = useLocation();
+  const nav = useNavigate();
   const product = location.state?.product;
   const [formData, setFormData] = useState({ name: "", email: "", street: "", residence: "", estate: "" });
   const [status, setStatus] = useState("");
 
+  console.log(product);
   if (!product) {
     return (
       <div className="text-center mt-10">
@@ -20,19 +52,29 @@ const SubmissionPage = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const templateParams = {
       name: formData.name,
       email: formData.email,
+      street: formData.street,
+      estate: formData.estate,
+      residence: formData.residence,
       product: `${product.name} - ${product.description}`,
     };
 
-    emailjs
-      .send("service_6kaxe22", "YOUR_TEMPLATE_ID", templateParams, "YOUR_PUBLIC_KEY")
-      .then(() => setStatus("Enviado con éxito!"))
-      .catch(() => setStatus("Error al enviar el correo."));
+      try {
+        await emailjs.send("service_6kaxe22", "template_byxuf69", templateParams, "f406haP7s2rgRlvSn");
+        setStatus("¡Enviado con éxito!");
+
+        await updateDB(product.id, product.quantity); 
+
+        nav("/finish");
+      }
+      catch {
+
+      }
   };
 
   return (
@@ -100,6 +142,7 @@ const SubmissionPage = () => {
         >
           Confirmar Pedido
         </button>
+        
       </form>
 
       {status && <p className="mt-4 text-center font-medium">{status}</p>}

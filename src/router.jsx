@@ -7,6 +7,7 @@ import Products from "./views/Products";
 import Layout from "./layouts/Layout";
 import Cart from "./views/Cart";
 import Submission from "./views/Submission";
+import Finish from "./views/Finish";
 
 function AppRouter() {
   return (
@@ -17,6 +18,7 @@ function AppRouter() {
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/submission" element={<Submission />}></Route>
+          <Route path="/finish" element={<Finish/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

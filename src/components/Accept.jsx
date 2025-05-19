@@ -45,7 +45,9 @@ const Accept = ({price, limit, product}) => {
                     product: {
                     imageSrc: product.imageSrc,
                     name: product["Descripción"],
-                    description: total
+                    description: total,
+                    quantity: quantity,
+                    id: product["NO ART"]
                     }
                 }}>
                 <button className="bg-[#CAE8E3] hover:bg-[#D5EDE9] text-black font-Montserrat font-bold
