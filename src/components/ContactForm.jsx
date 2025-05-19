@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({ name: "", lastname: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const params = {
+      email: formData.email,
+      name: formData.name,
+      lastname: formData.lastname,
+      message: formData.message
+    };
+
+    try {
+        await emailjs.send("service_6kaxe22", "template_8ypbk9e", params, "f406haP7s2rgRlvSn");
+        alert("Mensaje enviado!");
+    }
+    catch {
+
+    }
+  };
+
   return (
     <section className="bg-gradient-to-b from-[#024BAB] to-[#002D6E] py-16 text-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -11,7 +37,7 @@ const ContactForm = () => {
         <div className="flex flex-col lg:flex-row-reverse gap-12">
           {/* Formulario de Contacto (Derecha) */}
           <div className="lg:w-1/2">
-            <form className="space-y-6 bg-white p-8 rounded-lg shadow-lg h-full">
+            <form className="space-y-6 bg-white p-8 rounded-lg shadow-lg h-full" onSubmit={handleSubmit}>
               {" "}
               {/* Añadido h-full */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -25,8 +51,11 @@ const ContactForm = () => {
                   <input
                     type="text"
                     id="nombre"
+                    name="name"
                     className="w-full px-4 py-3 rounded-md font-Montserrat text-gray-800 border border-gray-300"
                     placeholder="Tu nombre"
+                    required
+                    onChange={handleChange}
                   />
                 </div>
                 <div>
@@ -39,8 +68,11 @@ const ContactForm = () => {
                   <input
                     type="text"
                     id="apellido"
+                    name="lastname"
                     className="w-full px-4 py-3 rounded-md font-Montserrat text-gray-800 border border-gray-300"
                     placeholder="Tu apellido"
+                    required
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -54,8 +86,11 @@ const ContactForm = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="w-full px-4 py-3 rounded-md font-Montserrat text-gray-800 border border-gray-300"
                   placeholder="tu@email.com"
+                  required
+                  onChange={handleChange}
                 />
               </div>
               <div>
@@ -67,9 +102,12 @@ const ContactForm = () => {
                 </label>
                 <textarea
                   id="mensaje"
+                  name="message"
                   rows="5"
                   className="w-full px-4 py-3 rounded-md font-Montserrat text-gray-800 border border-gray-300"
                   placeholder="Tu mensaje..."
+                  required
+                  onChange={handleChange}
                 ></textarea>
               </div>
               <div className="text-right">
