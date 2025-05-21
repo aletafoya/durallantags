@@ -2,6 +2,7 @@ import React from "react";
 import storeImage from "../assets/logo.webp";
 
 const Hero = () => {
+  console.log("kkk");
   return (
     <section className="w-full min-h-screen bg-gradient-to-b from-[#024BAB] to-[#002D6E] flex items-center">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center">
