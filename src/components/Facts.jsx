@@ -1,4 +1,7 @@
 import React from "react";
+import tireFactLeft from "../assets/facts/tire_fact_left.png";
+import tireFactMiddle from "../assets/facts/tire_fact_middle.png";
+import tireFactRight from "../assets/facts/tire_fact_right.png";
 
 const Facts = () => {
   const factItems = [
@@ -8,7 +11,7 @@ const Facts = () => {
       subtitle: "Evita accidentes innecesarios",
       description:
         "Unas llantas bien cuidadas ofrecen mejor tracción, estabilidad y frenado, reduciendo considerablemente el riesgo de accidentes, especialmente en condiciones difíciles como lluvia o curvas cerradas.",
-      image: "/src/assets/facts/tire_fact_left.png", // Reemplaza con tu imagen
+      image: tireFactLeft, // use imported variable
     },
     {
       id: 2,
@@ -16,7 +19,7 @@ const Facts = () => {
       subtitle: "Para Mayor Durabilidad",
       description:
         "El cuidado regular de tus llantas puede extender su vida útil hasta un 20%",
-      image: "/src/assets/facts/tire_fact_middle.png", // Reemplaza con tu imagen
+      image: tireFactMiddle,
     },
     {
       id: 3,
@@ -24,7 +27,7 @@ const Facts = () => {
       subtitle: "Menos desgaste, más kilómetros",
       description:
         "Realizar alineaciones, balanceos y rotaciones periódicas prolonga la vida útil de tus llantas y evita gastos innecesarios por reemplazos prematuros.",
-      image: "/src/assets/facts/tire_fact_right.png", // Reemplaza con tu imagen
+      image: tireFactRight,
     },
   ];
 
