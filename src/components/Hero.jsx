@@ -1,5 +1,5 @@
 import React from "react";
-import storeImage from "../assets/store.png";
+import storeImage from "../assets/logo.webp";
 
 const Hero = () => {
   return (
